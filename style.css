@@ -1,0 +1,534 @@
+/*
+Theme Name: tmp_usagipost
+Author: TMP*blog
+Version: 1.0
+*/
+@charset "UTF-8";
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+/*-- カスタマイズはご自由にして頂いて構いません。
+著作権表示の削除と再配布のみ禁止です。
+http://tmpblog.blog58.fc2.com/ --*/
+
+/*-- 全体 --*/
+* {margin : 0;padding : 0;}
+li {list-style-type:none;}
+textarea,select,input { font-size: 12px;}
+
+/*-- リンク --*/
+a {text-decoration: none;}
+a:link {color: #666;}
+a:visited {color:#666;}
+a:hover {color:#eee;}
+
+/*-- レイアウト --*/
+body {
+margin: 0;
+padding: 0;
+font-size:12px;
+color: #83856B;
+text-align: center;
+font-family: Verdana, Helvetica, sans-serif;
+background-color: #F8F8EC;
+background-image: url(https://9yu.eu/wp-content/themes/tmp_usagipost/img/usa_body.gif);
+}
+
+div#container {
+margin:  0 auto; 
+width: 700px; 
+text-align: left;
+}
+
+div#header {
+text-align : left;
+padding : 0;
+margin: 25px 0;
+}
+
+div#contents {
+width : 500px;
+float : right;
+margin : 0px;
+overflow:hidden;
+}
+
+div#footer {
+width: 100%;
+clear : both;
+padding: 0;
+}
+
+/*-- テーブル型カレンダー --*/
+.calender {
+margin: 0 auto;
+text-align: center;
+font-size: 11px;
+border-collapse: separate;
+border-spacing: 2px;
+}
+.calender td {
+padding: 1px;
+text-align: center;
+width: 16px;
+}
+
+.calender td a:link {
+font-weight: bold;
+}
+.calender td a:visited{
+font-weight: bold;
+}
+.calender td a:hover {
+font-weight: bold;
+}
+.calender caption{
+margin: 0 auto;
+text-align: center;
+}
+
+
+/*-- 見出し --*/
+h1{
+letter-spacing: 1px;
+padding: 0 30px 0 20px;
+font: bold 24px Georgia, Verdana, Helvetica, sans-serif;
+}
+h1 a:link {color: #999;}
+h1 a:visited {color: #999;}
+h1 a:hover {color: #D9C37A; text-decoration: none;}
+h1 a:active {color: #999;}
+
+
+h2 {
+font-size: 10px;
+font-weight:normal;
+margin: 0 20px 0 20px;
+color: #42253D;
+}
+
+h3 {
+height: 25px;
+color: #83856B;
+padding: 10px 30px 0 28px;
+margin: 0;
+font-size: 15px;
+background-image: url(https://9yu.eu/wp-content/themes/tmp_usagipost/img/usa_entitle.gif);
+background-repeat : no-repeat;
+background-position : left center;
+}
+h3 a:link {color: #83856B;}
+h3 a:visited {color: #83856B;}
+h3 a:hover {color: #eee; text-decoration: none;}
+h3 a:active {color: #83856B;}
+
+
+/*-- ページナビ --*/
+.pageselect {
+padding: 5px;
+margin: 20px 10px;
+text-align: center;
+font-size: 10px;
+color: #C6C5BF;
+font-weight: bold;
+}
+.pageselect a{
+color: #83856B;
+}
+.pageselect a:hover {
+color: #999;
+}
+
+/*-- エントリー --*/
+div.entry {
+margin: 10px 15px;
+padding: 0;
+background-image: url(https://9yu.eu/wp-content/themes/tmp_usagipost/img/usa_en.gif);
+border-right: 1px solid #D9C37A;
+border-bottom: 1px solid #D9C37A;
+}
+
+div.entry_title {
+margin: 0 15px 0 18px;
+padding: 0;
+}
+
+div.entry_body {
+font-size: 12px;
+line-height: 20px;
+margin: 0 15px 0 15px;
+padding: 20px 15px;
+color: #83856B;
+background-image: url(https://9yu.eu/wp-content/themes/tmp_usagipost/img/usa_entry2.gif);
+}
+div.entry_body a{
+text-decoration: underline;
+}
+
+/*--追記--*/
+div.entry_more {
+font-size: 10px;
+margin: 0;
+padding: 10px 3px;
+}
+div.entry_morebody {
+font-size: 12px;
+line-height: 20px;
+margin: 0;
+padding: 20px 0;
+color: #83856B;
+}
+
+/*--FC2ブックマーク、拍手表示--*/
+div.fc2_footer{
+margin: 0;
+padding: 20px 0 0 0;
+}
+
+/*--記事ステータス--*/
+.entry_state {
+font-size : 10px;
+color : #5B563D;
+text-align : right;
+padding : 0 20px 10px 0;
+margin: 0 15px 0 15px;
+letter-spacing:1px;
+}
+.entry_state p {
+padding-top: 20px;
+}
+
+/*--日付--*/
+.entryday {
+text-align : left;
+margin: 0;
+padding : 15px 0 10px 20px;
+font: bold 21px Georgia, Verdana, Helvetica, sans-serif;
+color: #D9C37A;
+line-height: 80%;
+}
+.entryday p {
+font-size: 12px;
+margin: 0;
+}
+
+/*-- 全記事表示 --*/
+.entry_all {
+margin: 10px 15px;
+padding: 0;
+font-family: "Verdana", "MS PGothic", "Osaka",sans-serif;
+font-size: 12px;
+line-height: 140%;
+color: #83856B;
+background-image: url(https://9yu.eu/wp-content/themes/tmp_usagipost/img/usa_en.gif);
+border-right: 1px solid #D9C37A;
+border-bottom: 1px solid #D9C37A;
+}
+.all_date{
+margin: 0;
+padding: 20px;
+font: bold 16px Georgia, Verdana, Helvetica, sans-serif;
+}
+
+.all_body{
+margin: 0 15px 5px 15px;
+padding: 0 10px;
+}
+.all_day {
+background: #F2EBB7;
+padding: 2px;
+margin: 0;
+}
+
+/*-- エントリー内画像 --*/
+.entry_body img { 
+border: 1px solid #5B563D;
+}
+img.left {
+float:left;
+clear:left;
+margin:5px 10px 5px 0px;
+padding:0px;
+}
+
+/*-- 引用文 --*/
+blockquote {
+padding: 0 10px;
+color: #83856B;
+line-height: 20px;
+background: #F3E1AF;
+background-image: url(https://9yu.eu/wp-content/themes/tmp_usagipost/img/usa_entry2.gif)
+}
+
+div.entry_body li{
+list-style-type: disc;
+margin: 0 15px 0 20px;
+}
+
+/*-- コメント表示部分 --*/
+div.comment {
+margin: 10px 15px;
+padding: 0;
+background-image: url(https://9yu.eu/wp-content/themes/tmp_usagipost/img/usa_en.gif);
+border-right: 1px solid #EBE29A;
+border-bottom: 1px solid #EBE29A;
+}
+div.commentbody {
+font-size: 12px;
+line-height: 150%;
+margin: 0 15px 0 15px;
+padding: 20px 15px;
+color: #83856B;
+}
+
+.commenttop {
+text-align : left;
+margin: 10px 15px 0 15px;
+padding : 10px 0 0 10px;
+font: bold 14px Georgia, Verdana, Helvetica, sans-serif;
+color: #83856B;
+}
+
+div.comment_title {
+margin: 0 15px 0 15px;
+padding: 15px 10px 0 10px;
+font: bold 14px Georgia, Verdana, Helvetica, sans-serif;
+color: #83856B;
+}
+
+.comment_state {
+font-size : 10px;
+color : #83856B;
+text-align : right;
+padding : 0 20px 5px 0;
+margin: 0 15px 0 15px;
+letter-spacing:1px;
+}
+
+
+/*-- トラックバック --*/
+.trackbackurl {
+margin :0px;
+background: #f5f5f5;
+border : 1px solid #83856B;
+font-size: 12px;
+color: #83856B;
+}
+
+/*-- サイドバー --*/
+
+div#sidebar {
+float:left;
+width:200px;
+overflow:hidden;
+padding: 350px 0 0 0;
+color: #FBF3E1;
+background-image:
+url(https://9yu.eu/wp-content/themes/tmp_usagipost/img/usa_tops.gif);
+background-repeat : no-repeat;
+background-position : top center;
+}
+
+div#sidebar a:link {color: #FBF3E1;}
+div#sidebar a:visited {color: #FBF3E1;}
+div#sidebar a:hover {color: #5B563D;}
+
+#sidebar ul li {
+margin: 0;
+padding: 2px 0 2px 5px;
+font-size: 10px;
+line-height: 130%;
+border-bottom: 1px dotted #EAE0D5;
+}
+
+#sidebar ul {
+margin: 0;
+padding: 0px;
+}
+
+.sidebar_title {
+font: bold 13px "Trebuchet MS", Monaco, sans-serif;
+letter-spacing: 1px;
+color: #42253D;
+margin: 0;
+padding: 5px 5px 5px 20px;
+background: #CBB593;
+background-image: url(https://9yu.eu/wp-content/themes/tmp_usagipost/img/usa_body.gif);
+}
+
+.sidebar_contents {
+margin : 0px;
+font-size : 10px;
+padding : 5px 15px;
+background: #CBB593;
+}
+
+div.prphoto {
+text-align: left;
+padding: 0 0 2px 10px;
+}
+
+div.prmessage {
+text-align: left;
+padding: 0 0 0 10px;
+}
+
+div.prname {
+text-align: left;
+padding: 0 0 0 10px;
+font-weight : bold;
+}
+
+
+/*-- 著作権表示部分 --*/
+.copyright{
+font-size:10px;
+padding:5px;
+text-align: center;
+line-height: 130%;
+color: #5B563D;
+}
+
+
+/*-- フォーム --*/
+input.serb {
+color: #f5f5f5;
+margin : 0;
+background: #83856B;
+font-weight : bold;
+font-size: 12px;
+border : 1px solid #83856B;
+}
+input {
+margin :1px;
+background: #f5f5f5;
+border : 1px solid #83856B;
+font-size: 12px;
+color: #83856B;
+}
+textarea {
+margin :1px;
+background: #f5f5f5;
+border : 1px solid #83856B;
+font-size: 12px;
+color: #83856B;
+}
+
+/*-- サイドバーアマゾン用 --*/
+.plugin-catamazon {
+text-align: center;
+font-size:10px;
+padding: 0;
+margin : 0 0 5px 0;
+}
+.plugin-catamazon a {
+font-weight : bold;
+}
+.plugin-catamazon img {
+border: none;
+margin : 3px 0 0 0;
+}
+.plugin-newamazon {
+text-align: center;
+font-size:10px;
+padding: 0;
+margin : 0 0 5px 0;
+}
+.plugin-newamazon a {
+font-weight : bold;
+}
+.plugin-newamazon img {
+border: none;
+margin : 3px 0 0 0;
+}
+
+/*--///// 共有ツリー化プラグイン /////--*/
+/*--///////////////////////////////////////////////////
+共有プラグイン Tree-CATEGORY・Tree-Recent・Tree-Comment
+Tree-LINK・Tree-Arcive・Tree-TB専用CSS
+上記プラグイン使用時に表示をそろえる為の設定です
+削除してもプラグインの使用に問題はありません。
+//////////////////////////////////////////////////////--*/
+#AR p, #RE p, #CA p, #LK p, #RT p, #RC p{
+margin-bottom: 2px;
+padding: 2px 0;
+font-size: 10px;
+line-height: 120%;
+border-bottom: 1px dotted #EAE0D5;
+} 
+/*--///// 共有ツリー化プラグインここまで /////--*/
+
+img {
+	border: 0 !important;
+	max-width: 100%;
+	height: auto;
+}
+
+.entry_body p+p, .commentbody p+p {
+	margin-top: 1em;
+}
+
+#respond p+p {
+	margin-top: 0;
+}
+
+#respond label {
+	display: block;
+}
+
+/* 友链 */
+#h_f {
+	padding: 0 0 0 1.8em;
+	margin-top: 1em;
+}
+
+#h_f img {
+	width: 30px;
+	padding: 10px 0 0 28px;
+	border: 0;
+}
+
+#h_f img.lite {
+	width: 46px !important;
+	padding: 0 0 0 15px !important;
+}
+
+#h_f .haiiro img {
+	width: 52px !important;
+	padding: 0 0 0 10px !important;
+}
+
+#h_f li {
+	width: 300px;
+	height: 70px;
+}
+
+#h_f div {
+	display: inline-block;
+	float: right;
+	width: 220px;
+}
+
+#h_f span {
+	display: block;
+}
+.h_mark span {
+	display: inline-block !important;
+	color: #999;
+	padding-left: 2px;
+}
+.h_mark span:before {
+	content: "(";
+}
+.h_mark span:after {
+	content: ")";
+}
+
+li.haiiro a {
+	text-decoration:line-through;
+}
+
+.h-hiki, pre {
+	background: none !important;
+	overflow-x: auto;
+}
